@@ -1,0 +1,11 @@
+file(GLOB_RECURSE samples *.cpp)
+
+set(DL_LIB "/usr/lib/x86_64-linux-gnu/libdl.so")
+set(PROFILER_LIB "/usr/local/lib/libprofiler.so")
+link_directories(${CMAKE_SOURCE_DIR}/build/src)
+foreach(src ${samples})
+	get_filename_component(name ${src} NAME_WE)
+	set(name ${name}.bin)
+	add_executable(${name} ${src})
+	target_link_libraries(${name} ${PROFILER_LIB} ${DL_LIB})
+endforeach()

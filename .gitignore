@@ -1,0 +1,17 @@
+/targets
+/build*
+/.vs
+/.vscode
+CppBuild.lock
+/deps
+/install
+/pkg
+/cmake-build-debug
+/test/kestrel_face_test_data/model
+*.swp
+*.log
+*.pro
+*.pro.user
+*.mdb
+.idea
+i_*
